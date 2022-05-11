@@ -9,8 +9,8 @@
  */
 int main(void)
 {
-    char *argv[] = {"/bin/export", "TEST_ENV=test/hello/world", NULL};
-    /* char **argv = {"/bin/ls", "-l", "/usr/", NULL}; */
+    /* char *argv[] = {"/bin/ls", "TEST_ENV=test/hello/world", NULL}; */
+    char *argv[] = {"/bin/ls", "-l", "/usr/", NULL};
 
     printf("Before execve\n");
     if (execve(argv[0], argv, NULL) == -1)

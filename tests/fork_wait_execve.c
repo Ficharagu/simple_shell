@@ -12,6 +12,24 @@
 int main(void)
 {
 	int child_pid;
+/* 	int status; */
+/* 	char *argv[] = {"/bin/ls", "-l", "/tmp", NULL}; */
+
+	/* execu
+	child_pid = fork();
+	if(child_pid != 0) child_pid = fork();
+	if(child_pid != 0) child_pid = fork();
+	if(child_pid != 0) child_pid = fork();
+	if(child_pid != 0) child_pid = fork();
+
+	if(child_pid == 0)
+	{
+		printf("p\n");
+	}
+
+	return (0);*/
+
+	int child_pid;
 	int status;
 /* 	char *argv[] = {"/bin/ls", "-l", "/tmp", NULL}; */
 

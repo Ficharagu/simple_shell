@@ -1,12 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
-/**
- * @brief a program that prints "$ ", wait for the user to enter a command, prints it on the next line.
- * 
- * @return int 
- */
-int main()
+char *my_getline(void)
 {
     char *line;
     size_t buffer_size = 32;
@@ -23,11 +19,12 @@ int main()
 
     printf("$ ");
     /*  while((characters = getline(&buffer, &bufsize, STDIN_FILENO)) != -1); */
+/*     bytes_read = getline(&line, &buffer_size, stdin); */
     bytes_read = getline(&line, &buffer_size, stdin);
 
     if (bytes_read == -1)
     {
-        puts ("ERROR!");
+        perror("Error:");
     }
 
     /* Replace new line character wuth Null character */
@@ -36,8 +33,20 @@ int main()
     }
 
     printf("%u characters were read.\n", (unsigned) bytes_read);
-    puts(line);
+    /* puts(line); */
 
-	free(line);
+/*     free(line); */
+
+    return (line);
+}
+
+/**
+ * @brief a program that prints "$ ", wait for the user to enter a command, prints it on the next line.
+ * 
+ * @return int 
+ */
+int main()
+{
+    printf("%s", my_getline());
     return(0);
 }

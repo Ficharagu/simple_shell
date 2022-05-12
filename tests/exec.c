@@ -10,13 +10,15 @@
 int main(void)
 {
     /* char *argv[] = {"/bin/ls", "TEST_ENV=test/hello/world", NULL}; */
-    char *argv[] = {"/bin/ls", "-l", "/usr/", NULL};
+    char *argv[] = {"export", NULL};
 
     printf("Before execve\n");
-    if (execve(argv[0], argv, NULL) == -1)
+
+    if (execve("/usr/bin/ls", argv, NULL) == -1)
     {
         perror("Error:");
     }
+
     printf("After execve\n");
     return (0);
 }

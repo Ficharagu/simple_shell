@@ -5,10 +5,10 @@
  * gcc -Wall -pedantic -Werror -Wextra -std=gnu89 strtok.c -o strtok && ./strtok
  */
 
-char ** split_string(char str_p[])
+char **split_string(char str_p[])
 {
 	/* char str[] = "Geeks-for-Geeks"; */
-	char* token;
+	char *token;
 	static char *str_arr[2];
 	int index = 0;
 /* 	int space_count = 0; */
@@ -37,7 +37,9 @@ char ** split_string(char str_p[])
 
     while (token != NULL) {
 		str_arr[index] = token;
+
         printf("%s\n", token);
+
         token = strtok(NULL, " ");
 		index++;
     }

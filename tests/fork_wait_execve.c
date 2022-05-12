@@ -37,6 +37,7 @@ int main(void)
 	for (i = 0; i < 5; i++) {
 		/* Child process PID is always 0 */
 		child_pid = fork();
+
 		if (child_pid == -1)
 		{
 			perror("Error:");
@@ -44,11 +45,11 @@ int main(void)
 		}
 
 		if (child_pid == 0) {
-/* 			if (execve(argv[0], argv, NULL) == -1)
+			if (execve(argv[0], argv, NULL) == -1)
 			{
 				perror("Error:");
 				return (1);
-			} */
+			}
 
 			printf("%u\n", i);
 			i++;

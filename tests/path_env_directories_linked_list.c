@@ -2,8 +2,6 @@
 
 #include "main.h"
 
-
-
 /**
  * main - a function that builds a linked list of the PATH directories
  *
@@ -17,10 +15,12 @@ int main(void)
 
 	__attribute__((unused)) path_dir_list_t *head = NULL;
 	__attribute__((unused)) path_dir_list_t *tmp = NULL;
+	
 	head = (path_dir_list_t *) malloc(sizeof(path_dir_list_t));
 
 	/* Get PATH directories */
 	directories_str = _getenv("PATH");
+
 	/* printf("%s\n", directories_str); */
 
 	/* Split  */
@@ -48,6 +48,5 @@ int main(void)
 	}
 
 	/*TODO Free memory */
-
 	return (0);
 }

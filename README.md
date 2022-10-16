@@ -54,7 +54,7 @@ gcc -Wall -Werror -Wextra -pedantic *.c -o seashell
 
 ## Authors :black_nib:
 
-* Moses MWangi <[mosessofteng](https://github.com/mosessofteng)>
+* Moses Mwangi <[mosessofteng](https://github.com/mosessofteng)>
 * Fiona Mbogo <[Ficharagu](https://github.com/Ficharagu)>
 
 
